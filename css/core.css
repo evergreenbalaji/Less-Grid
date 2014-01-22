@@ -653,7 +653,7 @@ h6 {
 .links {
   text-decoration: none;
   color: #006cd2;
-  padding: 0 0 0.1em;
+  padding: 0 0 0.15em;
 }
 .links:hover,
 .links:active {
@@ -702,8 +702,8 @@ h6 {
   }
 }
 p {
-  font-family: Merriweather;
-  line-height: 2.0em;
+  font-family: 'Merriweather','sans-serif';
+  line-height: 2.1em;
   color: #3a3a3a;
 }
 .hero {
@@ -910,17 +910,25 @@ a[id="main"]:target ~ #main {
 
 @media (max-width: 769px) {
   body{
-    font-size: 13px;
+    font-size: 14px;
   }
   .intro-message img{
-    width:50%;
+    width:55%;
   }
   .intro-message h1{
     width:85%;
     margin:0 auto;
+    line-height:1.3em;
+  }
+  .intro-message h2{
+    line-height:1.3em;
   }
   #main .preCSS {
     border-right: none;
+  }
+  .btn-primary {
+    margin-top:10px;
+    margin-bottom:10px;
   }
   
 }
