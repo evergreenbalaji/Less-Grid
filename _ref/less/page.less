@@ -1,0 +1,296 @@
+// The Imports
+// --------------------------------------------------
+@import "normalize.less";
+@import "clearfix.less";
+@import "grid.less";
+@import "_core-animation.less";
+@import url(http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700|Merriweather);
+// The Styles
+// --------------------------------------------------
+
+html,body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  padding: 0;
+  margin:0;
+  font-family: "Montserrat Alternates", Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  text-align:center;
+  overflow-x:hidden;
+  text-rendering:  optimizeLegibility;
+  background:#fff;
+  
+}
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  
+}
+
+@primeColor : #006CD2;
+
+// The Typography
+// --------------------------------------------------
+
+h1, h2, h3, h4, h5, h6 {
+  text-align:center;
+  margin:0;
+  padding:0;
+}
+.links{
+  text-decoration:none;
+  color:@primeColor;
+  padding:0 0 0.2em;
+}
+.links:hover,.links:active{
+  border-bottom:1px solid @primeColor;
+}
+
+// Grid Implmn Styles
+// --------------------------------------------------
+.row { 
+  .grid-row(); 
+}
+.Six{
+  .grid-column(6);
+}
+
+.Twelve{
+  .grid-column(12);
+  
+}
+
+
+p{
+  font-family:Merriweather;
+  line-height:2.0em;
+  color:#3a3a3a;
+}
+
+// Hero
+// --------------------------------------------------
+
+
+.hero{
+  margin:0;
+  padding: 50px 0 50px; 
+  color: #fff;
+  background:@primeColor url(../less_grid_bg.jpg) no-repeat center 0%;
+  background-size: cover;
+  text-align: center;
+
+  .intro-message {
+    .fadeInUp;
+    position: relative;
+    padding:7% 0;
+    
+  }
+  img{
+    margin: 0;
+    padding:0 0 3.5em;
+    width:30%;
+  }
+   h1 {
+    margin: 0;
+    padding:0 0 0.5em;
+    font-size: 2.8em;
+    font-weight:400;
+    line-height:1.0em;
+  }
+
+
+  h2 {
+    color:#000;
+    font-size: 2.5em;
+    line-height:1.0em;
+    font-weight:700;
+    padding:0px 0 0.6em;
+    
+
+  }
+
+
+}//hero
+
+a[ id= "main" ]:target ~ #main {
+    -webkit-transform: translateY( -1000px );
+    transform: translateY( -1000px );
+}
+
+// Main
+// --------------------------------------------------
+
+#main{
+  margin:0;
+  padding:2.0em 0 2.0em 0;
+      z-index:0; 
+    -webkit-transform: translateZ( 0 );
+    transform: translateZ( 0 );
+    -webkit-transition: -webkit-transform 0.6s ease;
+    transition: transform 0.6s ease;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+  h3{
+    color:#3a3a3a;
+    font-size: 2.2em;
+    line-height:1.0em;
+    font-weight:700;
+    padding:0em;
+
+
+
+  }
+  h4{
+    color:#3a3a3a;
+    font-size: 1.5em;
+    line-height:1.0em;
+    font-weight:700;
+    padding:0em;
+
+  }
+  .download{
+    margin:3.0em 0 3.0em;
+    button{
+      margin:0px 10px;
+
+    }
+  }
+  .codeBlock{
+    font-family:Consolas,'Monaco,';
+    color:#3f3f3f;
+    text-align:center;
+    background:#f1f1f1;
+    border:1px solid #dedede;
+    padding:0em 4.0em;
+    margin:2.0em 0 2.5em 0;
+  }
+  pre{
+    text-align:left;
+  }
+  .preCSS{
+    border-right:1px solid #dedede;
+  }
+  .credits{
+  font-style:italic;
+  p{
+    line-height:1.0em;
+  }
+}
+
+}//main
+
+// Button
+// --------------------------------------------------
+
+.btn {
+  border: 1px solid @primeColor;
+  font-weight:400;
+  font-size: 14px;
+  color: white;
+  background: none;
+  cursor: pointer;
+  padding: 17px 35px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+ }
+
+.btn:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.icon-down:before {
+  content: "\2193"; //   content: "↓";
+
+}
+.btn-primary {
+  border-radius: 5px;
+  border: 2px solid @primeColor;
+  color: @primeColor;
+  overflow: hidden;
+ -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  text-decoration:none;
+  margin-left:20px;
+}
+.btn-primary:hover,.btn-primary:active {
+  border-radius: 5px;
+  border: 2px solid @primeColor;
+  background:@primeColor;
+  color: #fff;
+  overflow: hidden;
+ -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.btn-down {
+  border-radius: 5px;
+  border: 2px solid #fff;
+  color: #fff;
+  overflow: hidden;
+ -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+
+.btn-down span {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.3s;
+  -webkit-backface-visibility: hidden;
+  -moz-transition: all 0.3s;
+  -moz-backface-visibility: hidden;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+}
+
+.btn-down:before {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  line-height: 2.0;
+  font-size: 180%;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.btn-down:active:before {
+  color: #004a70;
+}
+
+.btn-downer:hover span {
+  -webkit-transform: translateY(200%);
+  -moz-transform: translateY(200%);
+  -ms-transform: translateY(200%);
+  transform: translateY(200%);
+}
+
+.btn-downer:before {
+  left: 0;
+  top: -100%;
+}
+
+.btn-downer:hover:before {
+  top: -2px;
+}
+/* //Button Learn More */
