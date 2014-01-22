@@ -911,6 +911,13 @@ a[id="main"]:target ~ #main {
   body{
     font-size: 13px;
   }
+  .intro-message img{
+    width:50%;
+  }
+  .intro-message h1{
+    width:85%;
+    margin:0 auto;
+  }
   #main .preCSS {
     border-right: none;
   }
